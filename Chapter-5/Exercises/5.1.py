@@ -26,7 +26,6 @@ def calculate_sum(numbers):
 while int(input_number) != 0:
     input_number = input("Please enter the number, Enter 0 to exit: ")
     if int(input_number) == int(0):
-        # print("User provided 0, Quitting Program")
         break
     else:
         if check_even_odd(input_number):
