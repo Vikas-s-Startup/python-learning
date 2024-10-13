@@ -1,0 +1,11 @@
+# Conversion factors
+GALLON_TO_LITER = 3.785
+LITER_TO_GALLON = 1 / GALLON_TO_LITER
+
+GALLON = 2
+LITER = 10
+
+while GALLON <= 100 and LITER <= 157:
+    print(f"{GALLON}   {GALLON * GALLON_TO_LITER}  | {LITER}       {LITER / GALLON_TO_LITER}")
+    GALLON += 2
+    LITER += 3
