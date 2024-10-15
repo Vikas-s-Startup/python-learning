@@ -5,7 +5,7 @@ def printMonth(year, month):
 def printMonthTitle(year, month):
     print("          ", printMonthName(month)," ", year)
     print("---------------------------------")
-    print(" Sun Mon Tue Wed Thru Fri Sat")
+    print(" Sun Mon Tue Wed Thu Fri Sat")  # corrected typo from "Thru" to "Thu"
 
 def printMonthBody(year, month):
     startDay = getStartDay(year, month)
@@ -13,68 +13,48 @@ def printMonthBody(year, month):
 
     i = 0
     for i in range(startDay):
-        print("    ", end = "")
+        print("    ", end = "")  # 4 spaces for each day
     for i in range(1, numberofDaysInMonth + 1):
         print(f"{i:4d}", end = "")
-        if (i+startDay) % 7 ==0:
+        if (i + startDay) % 7 == 0:
             print()
 
 def printMonthName(month):
-    if month == 1:
-        return 'January'
-    elif month == 2:
-        return 'February'
-    elif month == 3:
-        return 'March'
-    elif month == 4:
-        return 'April'
-    elif month == 5:
-        return 'May'
-    elif month == 6:
-        return 'June'
-    elif month == 7:
-        return 'July'
-    elif month == 8:
-        return 'August'
-    elif month == 9:
-        return 'September'
-    elif month == 10:
-        return 'October'
-    elif month == 11:
-        return 'November'
-    elif month == 12:
-        return 'December'
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+              'August', 'September', 'October', 'November', 'December']
+    return months[month - 1]
 
 def getStartDay(year, month):
-    START_DAY_FOR_JAN_1800 = 3
+    START_DAY_FOR_JAN_1800 = 3  # Jan 1, 1800 was a Wednesday
     totalNumberOfDays = getTotalNumberofDays(year, month)
 
-    return ( START_DAY_FOR_JAN_1800 + totalNumberOfDays ) % 7
+    return (START_DAY_FOR_JAN_1800 + totalNumberOfDays) % 7
 
-# get the total number of days since Jan 1 1800
 def getTotalNumberofDays(year, month):
     total = 0
+    # Add days for years since 1800
     for i in range(1800, year):
-        if isLeapYear(i):
+        if isLeapYear(i):  # check each year in the range for leap year
             total += 366
         else:
             total += 365
 
+    # Add days for months in the current year
     for j in range(1, month):
-        total += int(getNumberOfDaysInMonth(year, j))
+        total += getNumberOfDaysInMonth(year, j)
 
     return total
 
 def getNumberOfDaysInMonth(year, month):
-    if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
+    if month in [1, 3, 5, 7, 8, 10, 12]:
         return 31
-    elif month == 4 or month == 6 or month == 9 or month == 11:
+    elif month in [4, 6, 9, 11]:
         return 30
     elif month == 2:
         return 29 if isLeapYear(year) else 28
 
 def isLeapYear(year):
-    return year% 400 == 0 or (year % 4 == 0 and year % 100 !=0)
+    return year % 400 == 0 or (year % 4 == 0 and year % 100 != 0)
 
 def main():
     year = int(input("Enter full year (example 2002): "))
