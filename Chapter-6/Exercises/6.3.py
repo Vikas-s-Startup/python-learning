@@ -1,6 +1,3 @@
-
-
-
 def check_palindrome(string_to_check):
     first_index = 0
     last_index = len(string_to_check) - 1
