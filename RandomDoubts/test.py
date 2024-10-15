@@ -1,2 +1,2 @@
 for i in range(1, 120):
-    print(i)
+    print(i%2)
