@@ -21,7 +21,9 @@ Y2  = float(input("Enter the x-coordinate of point 2: "))
 
 if leftOfTheLine(X0, Y0, X1, Y1, X2, Y2):
     print(f"({X2},{Y2}) is on the left side of the line from ({X0},{Y0}) to ({X1},{Y1})")
+
 if RightOfTheLine(X0, Y0, X1, Y1, X2, Y2):
     print(f"({X2},{Y2}) is on the right side of the line from ({X0},{Y0}) to ({X1},{Y1})")
+
 if OnTheLine(X0, Y0, X1, Y1, X2, Y2):
     print(f"({X2},{Y2}) is on the line from ({X0},{Y0}) to ({X1},{Y1})")
