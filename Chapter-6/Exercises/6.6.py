@@ -4,4 +4,4 @@ def displayPattern(n):
             print(j, end = " ")
         print()
 
-displayPattern(100)
+displayPattern(50)
