@@ -1,6 +1,3 @@
-# Non-Space Counter
-
-
 user_input = "Hello World! I am Rick."
 
 nonSpaceCharacters = 0
