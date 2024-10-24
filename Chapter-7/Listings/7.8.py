@@ -15,6 +15,6 @@ def binarySearch(lst, key):
 
 def main():
     lst = [-3, 1, 2, 4, 9, 23]
-    print(binarySearch(lst, 2))  # This will now print the index of 2, which is 2.
+    print(binarySearch(lst, 4))  # This will now print the index of 2, which is 2.
 
 main()
