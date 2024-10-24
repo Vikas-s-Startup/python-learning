@@ -22,3 +22,4 @@ for i in range(NUMBER_OF_CHARS):
     print(getRandomLowerCaseLetter(), end = "")
     if (i+1) % CHARS_PER_LINE == 0:
         print()
+
