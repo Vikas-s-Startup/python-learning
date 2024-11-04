@@ -1,6 +1,6 @@
 import random
 
-queens_count = 10
+queens_count = 8
 
 def is_safe(board, row, col):
     # Check this column
