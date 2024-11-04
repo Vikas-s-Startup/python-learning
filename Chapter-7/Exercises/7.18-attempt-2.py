@@ -89,11 +89,11 @@ def is_safe(board, row, col, n):
     return True
 
 def solve_queens_problem(queens_count, blank_board):
-    random_first_row = random.randint(0, 7)
-    blank_board[0][random_first_row] = "Q"
+    # random_first_row = random.randint(0, 7)
+    blank_board[0][4] = "Q"
     for row in range(1, len(blank_board)):
         for block in range(len(blank_board[row])):
-            if is_safe(queens_count, blank_board,row, block):
+            if isSafe(queens_count, blank_board,row, block):
                 blank_board[row][block] = "Q"
                 break
     return blank_board
