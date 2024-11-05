@@ -26,6 +26,7 @@ def is_safe(board, row, col, n):
     return True
 
 def solve_n_queens(board, row, n):
+
     if row >= n:
         return True  # All queens are placed
 
