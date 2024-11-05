@@ -1,1 +1,2 @@
 7.18 ( N Queens Problem ) [Backtracking]
+7.20 ( N Queens Problem ) [Backtracking]
