@@ -3,7 +3,7 @@ import random
 all_cards = ["D" + "-" + str(x) for x in range(1, 14)] + ["H" + "-" + str(x) for x in range(1, 14)] + [
     "S" + "-" + str(x) for x in range(1, 14)] + ["C" + "-" + str(x) for x in range(1, 14)]
 
-random.shuffle(all_cards)
+# random.shuffle(all_cards)
 
 picked_cards = []
 unique_cards = []
