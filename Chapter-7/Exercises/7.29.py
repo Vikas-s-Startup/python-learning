@@ -24,6 +24,7 @@ def main():
 	while continue_playing != "n":
 		guess_word_game()
 		continue_playing = input("Do you want to guess another word? Enter Y or N > ")
+	print("Thanks for playing hangman game developed by soon legendary programmer Vikas Koppineedi")
 
 
 main()
