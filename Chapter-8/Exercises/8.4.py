@@ -23,3 +23,4 @@ avgs.sort()
 print(avgs[::-1])
 
 
+
